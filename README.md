@@ -1,3 +1,0 @@
-```jsx
-Jai Mata Di
-```
