@@ -9,8 +9,7 @@ res.send('Jai Mata Di');
 app.get('/sachin', (req,res)=>{
     res.send('hello i am sachin rawat')
 })
-app.get('/mangesh', (req,res)=>{
-    res.send('hello i am Mangesh Yadav')
+
 })
 var server = app.listen(8081, function () {
 
