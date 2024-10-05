@@ -10,8 +10,6 @@ app.get('/sachin', (req,res)=>{
     res.send('hello i am sachin rawat')
 })
 
-app.get('/sach', (req,res)=>{
-    res.send('ye hi satya h')
 })
 var server = app.listen(8081, function () {
 
