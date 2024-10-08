@@ -21,19 +21,18 @@ const Icons = {
 
 export function CreateAccount() {
   return (
-    //center the card
-    <div className='flex justify-center items-center'>
     
-       <Card>
+    
+       <Card className="mx-auto max-w-sm  tracking-wider">
       <CardHeader className="space-y-1">
-        <CardTitle className="text-2xl">Create an account</CardTitle>
+        <CardTitle className="text-2xl">Sign In </CardTitle>
         <CardDescription>
-          Enter your email below to create your account
+          Enter your email and password
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
         <div className="grid grid-cols-2 gap-6">
-          <Button variant="outline">
+          <Button variant="outline" >
             <Icons.gitHub className="mr-2 h-4 w-4" />
             Github
           </Button>
@@ -62,9 +61,9 @@ export function CreateAccount() {
         </div>
       </CardContent>
       <CardFooter>
-        <Button className="w-full">Create account</Button>
+        <Button className="w-full">Sign In</Button>
       </CardFooter>
     </Card>
-      </div>
+      
     )
 }
