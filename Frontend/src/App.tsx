@@ -1,25 +1,40 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import LoginForm from "./components/LoginForm"
-import { ModeToggle } from "./components/ui/mode-toggle"
+import { SignedIn, SignIn, SignUp, UserProfile } from "@clerk/clerk-react"
+import { ModeToggle } from './components/ui/mode-toggle';
 
 
 
 function App() {
 
   return (
-    <>
-     <div className="m-2 flex justify-end">
-     <ModeToggle />
-     </div>
+    <BrowserRouter>
+    <div className='flex justify-end m-[1rem]'><ModeToggle /></div>
 
-    <div className='m-5 flex justify-center'>
-  {/* <CreateAccount /> */}
-  <LoginForm />
-  </div>
-     
-   
-     
-    </>
+      <div className='flex justify-center mt-[2rem]'>
+        <Routes>
+
+          <Route path="/" element={
+            <h1>
+              hello world
+            </h1>
+          } />
+          <Route path="/signup" element={<SignUp fallbackRedirectUrl={'/userprofile'} />} />
+          <Route path="/signin" element={<SignIn fallbackRedirectUrl={'/userprofile'} />} />
+          <Route path="/userprofile" element={
+            <SignedIn>
+              <UserProfile />
+            </SignedIn>
+            } />
+
+        </Routes>
+      </div>
+
+
+
+
+
+    </BrowserRouter>
   )
 }
 

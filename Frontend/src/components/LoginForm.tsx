@@ -20,16 +20,16 @@ const Icons = {
   
 
 
-export const iframeHeight = "600px"
+export const iframeHeight = "800px"
 
 export const containerClassName =
   "w-full h-screen flex items-center justify-center px-8"
 
 export default function LoginForm() {
   return (
-    <Card className="mx-auto max-w-sm">
+    <Card className="mx-auto max-w-sm tracking-wider">
       <CardHeader>
-        <CardTitle className="text-2xl">Create an account</CardTitle>
+        <CardTitle className="text-3xl">Create an account</CardTitle>
         <CardDescription>
         Enter your email below to create your account
         </CardDescription>
