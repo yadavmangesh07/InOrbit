@@ -12,10 +12,7 @@ function App() {
 
   return (
     <>
- {/* I want this navbar to float at the bottom */}
       <div className='fixed bottom-0 w-full'>
-      
-
       <NavBar />
       </div>
       <BrowserRouter>
@@ -25,11 +22,9 @@ function App() {
 
             <Route path="/" element={
               <>
-
                 <h1 className='mt-[10rem]'>
                   Welcome to InOrbit...
                 </h1>
-
               </>
 
 
