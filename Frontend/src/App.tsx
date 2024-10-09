@@ -1,40 +1,57 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { SignedIn, SignIn, SignUp, UserProfile } from "@clerk/clerk-react"
+import { SignedIn, SignedOut, SignIn, SignInButton, SignOutButton, SignUp, UserButton, UserProfile } from "@clerk/clerk-react"
 import { ModeToggle } from './components/ui/mode-toggle';
+import { User } from 'lucide-react';
+import { Button } from './components/ui/button';
+import NavBar from './components/NavBar';
 
 
 
 function App() {
 
   return (
-    <BrowserRouter>
-    <div className='flex justify-end m-[1rem]'><ModeToggle /></div>
+    <>
+ {/* I want this navbar to float at the bottom */}
+      <div className='fixed bottom-0 w-full'>
+      
 
-      <div className='flex justify-center mt-[2rem]'>
-        <Routes>
+      <NavBar />
+      </div>
+      <BrowserRouter>
 
-          <Route path="/" element={
-            <h1>
-              hello world
-            </h1>
-          } />
-          <Route path="/signup" element={<SignUp fallbackRedirectUrl={'/userprofile'} />} />
-          <Route path="/signin" element={<SignIn fallbackRedirectUrl={'/userprofile'} />} />
-          <Route path="/userprofile" element={
-            <SignedIn>
-              <UserProfile />
-            </SignedIn>
+        <div className='flex justify-center mt-[2rem]'>
+          <Routes>
+
+            <Route path="/" element={
+              <>
+
+                <h1 className='mt-[10rem]'>
+                  Welcome to InOrbit...
+                </h1>
+
+              </>
+
+
+            } />
+            <Route path="/signup" element={<SignUp fallbackRedirectUrl={'/'} />} />
+            <Route path="/signin" element={<SignIn fallbackRedirectUrl={'/'} />} />
+            <Route path="/userprofile" element={
+              <SignedIn>
+                <UserProfile />
+
+              </SignedIn>
             } />
 
-        </Routes>
-      </div>
+          </Routes>
+        </div>
 
 
 
 
 
-    </BrowserRouter>
+      </BrowserRouter>
+    </>
   )
 }
 

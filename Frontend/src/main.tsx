@@ -3,7 +3,8 @@ import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import { ThemeProvider, useTheme } from './components/ui/Theme-provider.tsx'
-import { ClerkProvider} from '@clerk/clerk-react'
+import { ClerkProvider } from '@clerk/clerk-react'
+import {  MultisessionAppSupport} from '@clerk/clerk-react/internal'
 import { dark} from '@clerk/themes'
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
@@ -36,8 +37,10 @@ const Root = () => {
 
   return (
     <StrictMode>
-      <ClerkProvider publishableKey={PUBLISHABLE_KEY} appearance={clerkTheme}>
+      <ClerkProvider publishableKey={PUBLISHABLE_KEY} appearance={clerkTheme} >
+      <MultisessionAppSupport>
         <App />
+      </MultisessionAppSupport>
       </ClerkProvider>
     </StrictMode>
   );
