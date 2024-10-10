@@ -17,10 +17,14 @@ const CodingProfileCard = ({ platformName }: CodingProfileCardProps) => {
         
         <p className="text-sm font-medium pr-[1rem]">{platformName}</p>
         
-        <Input placeholder={`https://${platformName}.com/username`} className="flex" />
+        <Input placeholder={`https://${platformName}.com/username`} id="input" className="flex" />
   
         <Button variant="ghost" className="ml-[1rem] text-sm font-medium hover:text-[#21C35B]">
           <p className="text-[#21C35B]">Add</p>
+        </Button>
+       
+        <Button variant="ghost" className="ml-[1rem] text-sm font-medium hover:text-[#EF4444]">
+          <p className="text-[#EF4444]">Verify</p>
         </Button>
       </div>
    </div>

@@ -1,12 +1,16 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { SignIn, SignUp } from "@clerk/clerk-react"
+import { SignIn, SignUp,useUser } from "@clerk/clerk-react"
 
 import NavBar from './components/NavBar';
+import { Charts } from './components/HomePage';
+import { NavigationMenuDemo } from './components/HeroPage';
+
 
 
 
 function App() {
+  const { user } = useUser();
 
   return (
     <>
@@ -20,7 +24,14 @@ function App() {
 
             <Route path="/" element={
               <>
-                <h1 className='text-2xl tracking-wider'>Welcome to InOrbit...</h1>
+              {
+                user ?<>
+                <Charts/>
+                
+
+                </>
+                  : <NavigationMenuDemo/>
+              }
               </>
 
 
