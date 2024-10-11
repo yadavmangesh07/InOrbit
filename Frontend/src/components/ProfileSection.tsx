@@ -41,7 +41,7 @@ export function ProfileSection() {
         </div>
         <SheetFooter>
           <SheetClose asChild>
-            <Button type="submit">Save changes</Button>
+            <Button type="submit">Save Changes</Button>
           </SheetClose>
         </SheetFooter>
       </SheetContent>
