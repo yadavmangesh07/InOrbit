@@ -66,7 +66,11 @@ export function SetGoal() {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Button variant="outline">Set Goal</Button>
+        {/* <Button variant="outline"> */}
+         <span className="font-medium text-sm">
+         Set Goal
+         </span>
+          {/* </Button> */}
       </DrawerTrigger>
       <DrawerContent>
         <div className="mx-auto w-full max-w-sm">

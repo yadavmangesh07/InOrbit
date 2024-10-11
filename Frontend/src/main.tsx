@@ -37,11 +37,13 @@ const Root = () => {
 
   return (
     <StrictMode>
-      <ClerkProvider publishableKey={PUBLISHABLE_KEY} appearance={clerkTheme} >
+      <ThemeProvider >
+      <ClerkProvider publishableKey={PUBLISHABLE_KEY} appearance={clerkTheme}  >
       <MultisessionAppSupport>
         <App />
       </MultisessionAppSupport>
       </ClerkProvider>
+      </ThemeProvider>
     </StrictMode>
   );
 };
