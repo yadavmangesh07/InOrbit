@@ -16,7 +16,9 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm install @octokit/rest
+        run: |
+          npm install @octokit/rest
+          npm install @actions/github
 
       - name: Run bot response script
         run: node bot-response.mjs
