@@ -14,7 +14,7 @@ async function run() {
     owner,
     repo,
     issue_number: prNumber,
-    body: "Thank you for your pull request! We will review it shortly.",
+    body: "Thank you for your contribution! We're excited to review your pull request and will get back to you soon.",
   });
 }
 
