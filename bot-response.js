@@ -1,11 +1,11 @@
-const { Octokit } = require("@octokit/rest");
+import { Octokit } from "@octokit/rest";
+import { context } from "@actions/github";
 
 const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN,
 });
 
 async function run() {
-  const { context } = require("@actions/github");
   const prNumber = context.payload.pull_request.number;
   const repo = context.repo.repo;
   const owner = context.repo.owner;
