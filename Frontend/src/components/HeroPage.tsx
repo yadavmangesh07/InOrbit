@@ -4,7 +4,7 @@ import { NavigationMenuDemo } from "./NavigationMenuDemo"
 const HeroPage = () => {
   return (
     <div className="flex items-center justify-between w-full ml-[5rem] mr-[5rem]">
-      <span className="font-semibold text-sm">Logo</span>
+      <span className="font-semibold text-sm">Mangesh</span>
       <NavigationMenuDemo/>
       <div className=" flex font-semibold text-sm ">
         <span >
