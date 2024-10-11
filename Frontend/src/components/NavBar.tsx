@@ -18,7 +18,7 @@ const NavBar = () => {
         } bg-opacity-1`}
     >
       <div className="flex w-[33%] items-center">
-        <span className='font-medium text-sm'>InOrbit</span>
+        <span className='font-medium text-sm'>In-Orbit</span>
       </div>
       <SignedIn>
         <div className='flex items-center on hover:cursor-pointer'>
