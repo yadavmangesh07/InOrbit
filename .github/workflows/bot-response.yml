@@ -1,4 +1,4 @@
-name: "PR Response Bot"
+name: "In-Orbiter Cheif"
 on:
   pull_request:
     types: [opened, edited]
