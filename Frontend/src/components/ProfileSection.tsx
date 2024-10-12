@@ -34,7 +34,7 @@ export function ProfileSection() {
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="username" className="text-right">
-              Username
+              Name 
             </Label>
             <Input id="username" value="@peduarte" className="col-span-3" />
           </div>
