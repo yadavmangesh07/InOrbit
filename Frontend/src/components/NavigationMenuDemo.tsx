@@ -123,7 +123,7 @@ export function NavigationMenuDemo() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="sm:block hidden">
           <Link to="/docs"  >
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Documentation

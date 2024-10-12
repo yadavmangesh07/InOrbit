@@ -45,24 +45,8 @@ const NavBar = () => {
             <p className='hidden sm:flex items-center text-sm font-medium'>
               {user?.username}
             </p>            <span className='ml-[.5rem] mt-1.5'>
-              <UserButton >
-
-                {/* Coding Profiles with xmlcode icon */}
-                {/* <UserButton.UserProfilePage label="Coding Profiles" url="profiles" labelIcon={<CodeXml size={18} />}>
-                  <CodingProfiles />
-                </UserButton.UserProfilePage> */}
-
-                {/* Professional Details with profile icon */}
-                {/* <UserButton.UserProfilePage label="Professional Details" url="details" labelIcon={<BookUser size={18} />} >
-                  <ProfessionalDetails />
-                </UserButton.UserProfilePage>
-                <UserButton.UserProfilePage label="Connections" url="connections" labelIcon={<Handshake size={18} />} >
-                  <h1>Connections</h1>
-                </UserButton.UserProfilePage> */}
-
-
-
-              </UserButton>
+              <UserButton />
+             
             </span>
           </SignedIn>
           <span className='ml-[.5rem]'>

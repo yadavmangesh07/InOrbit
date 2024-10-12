@@ -1,23 +1,22 @@
-import { SignInButton} from "@clerk/clerk-react"
-import { NavigationMenuDemo } from "./NavigationMenuDemo"
+import { AnimatedBeamDemo } from "./AnimatedBeam"
+import HeroPageNavBar from "./HeroPageNavBar"
+
 
 const HeroPage = () => {
   return (
-    <div className="flex items-center justify-between w-full ml-[5rem] mr-[5rem]">
-      <span className="font-semibold text-sm">Mangesh</span>
-      <NavigationMenuDemo/>
-      <div className=" flex font-semibold text-sm ">
-        <span >
-          
-
-        <SignInButton />
-         
-        </span>
-        <span className="ml-[1rem]">
-          <SignInButton/>
-        </span>
-       
+    <div className="flex flex-col w-full">
+      <div className="flex sticky w-full">
+        <HeroPageNavBar />
       </div>
+      <div className=" flex justify-center items-center mt-[2rem]">
+        <AnimatedBeamDemo />
+      </div>
+
+
+
+
+
+
     </div>
   )
 }
