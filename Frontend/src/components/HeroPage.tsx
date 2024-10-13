@@ -8,7 +8,7 @@ const HeroPage = () => {
       <div className="flex sticky w-full">
         <HeroPageNavBar />
       </div>
-      <div className=" flex justify-center items-center mt-[2rem]">
+      <div className=" flex justify-center items-center mt-[2rem] mr-[4rem]">
         <AnimatedBeamDemo />
       </div>
 

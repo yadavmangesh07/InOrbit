@@ -12,11 +12,16 @@ const NavBar = () => {
   const { user } = useUser();
   return (
     <div
-      className={`ml-[5rem]  mr-[5rem] mb-[3rem] flex  justify-between p-[.5rem] border rounded-md drop-shadow-xl backdrop-blur ${theme === 'dark'
-        ? 'bg-[rgba(31,31,35,0.1)] text-white border-[rgba(255,255,255,0.5)]'  // 10% opaque dark background and 50% transparent white border
-        : 'bg-[rgba(255,255,255,0.1)] text-black border-[rgba(42,75,52,0.5)]' // 10% opaque light background and 50% transparent black border
-        } bg-opacity-1`}
-    >
+  className={`h-auto   flex justify-between p-[.5rem] border rounded-lg shadow-md drop-shadow-xl backdrop-blur ${
+    theme === "dark"
+      ? "bg-[rgba(31,31,35,0.1)] text-white " // Dark theme
+      : theme === "light"
+      ? "bg-[rgba(255,255,255,0.1)] text-black border rounded-lg shadow-md border-[rgba(42,75,52,0.5)]" // Light theme
+      : window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "bg-[rgba(31,31,35,0.1)] text-white " // System dark mode
+      : "bg-[rgba(255,255,255,0.1)] text-black " // System light mode
+  } bg-opacity-1 m-[2rem] md:m-[4rem]`}
+>
       <div className="flex w-[33%] items-center">
         <span className='font-medium text-sm'>In-Orbit</span>
       </div>
