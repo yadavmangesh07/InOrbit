@@ -68,7 +68,7 @@ export function SetGoal() {
       <DrawerTrigger asChild>
         {/* <Button variant="outline"> */}
          <span className="font-medium text-sm">
-         Set Goal
+         Goal
          </span>
           {/* </Button> */}
       </DrawerTrigger>
