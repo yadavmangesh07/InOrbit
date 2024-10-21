@@ -4,7 +4,7 @@ import { useTheme } from './ui/Theme-provider';
 import { useUser } from '@clerk/clerk-react';
 import { Button } from './ui/button';
 import { SetGoal } from './SetGoal';
-import { ProfileSection } from './ProfileSection';
+import { NavProfile } from './NavProfile';
 
 
 const NavBar = () => {
@@ -29,7 +29,9 @@ const NavBar = () => {
         <div className='flex items-center on hover:cursor-pointer'>
 
           <SetGoal />
-          <ProfileSection />
+         <NavProfile/>
+          
+         
 
         </div>
       </SignedIn>
