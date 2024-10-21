@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+
 import { SignIn, SignUp, UserProfile, useUser } from "@clerk/clerk-react"
 
 
@@ -9,11 +10,14 @@ import HeroPage from './components/HeroPage';
 
 
 
+
 function App() {
   const { user } = useUser();
 
   return (
     <>
+    
+    
 
       <BrowserRouter>
 
