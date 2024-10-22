@@ -2,7 +2,7 @@ import { CircleUserRound } from "lucide-react"
 import { Input } from "../ui/input"
 import { Label } from "../ui/label"
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group"
-import UploadResume from "../UploadResume"
+import UploadResume from "./UploadResume"
 import { DatePickerDemo } from "./DatePickerDemo"
 
 const PersonalDetails = () => {

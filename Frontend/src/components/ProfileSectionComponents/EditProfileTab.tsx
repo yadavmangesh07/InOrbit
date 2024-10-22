@@ -1,5 +1,5 @@
 
-import { SheetClose, SheetFooter } from "../ui/sheet"
+import { SheetClose, SheetDescription, SheetFooter, SheetHeader, SheetTitle } from "../ui/sheet"
 import { Button } from "../ui/button"
 
 
@@ -13,16 +13,24 @@ function EditProfileTab() {
  
   return (
     <>
+    
+    <SheetHeader>
+          <SheetTitle className="text-xl sm:text-2xl text-left mt-1">Edit Profile</SheetTitle>
+          <SheetDescription className="sm:text-base text-left">
+            Make changes to your profile here. Click save when you're done.
+          </SheetDescription>
+        </SheetHeader>
+    
       
       <div className="grid gap-4 py-4">
-        {/* Existing layout */}
+        {/* Personal Details */}
         <PersonalDetails />
 
         {/* Academic Details */}
        
         <div className="grid gap-4 py-4">
           <AcademicDetails />
-          
+        {/* Project Details */}
         </div>
             <AddProjectSection/>
       </div>
