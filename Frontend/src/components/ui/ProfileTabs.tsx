@@ -4,7 +4,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs";
-import EditProfileTab from "./ProfileSectionComponents/EditProfileTab";
+import EditProfileTab from "../ProfileSectionComponents/EditProfileTab";
 
 export function ProfileTabs() {
   return (

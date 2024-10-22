@@ -14,8 +14,8 @@ import {
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group"
 import { DatePickerDemo } from "./ui/DatePickerDemo"
 import UploadResume from "./UploadResume"
-import { ComboBoxBranch } from "./ui/ProfileSectionComponents/ComboBoxBranch"
-import { ComboBoxYear } from "./ui/ProfileSectionComponents/ComboBoxYear"
+import { ComboBoxBranch } from "./ProfileSectionComponents/ComboBoxBranch"
+import { ComboBoxYear } from "./ProfileSectionComponents/ComboBoxYear"
 
 
 export function ProfileForm() {
