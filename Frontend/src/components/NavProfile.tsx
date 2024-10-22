@@ -5,7 +5,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import { ProfileTabs } from "./ui/ProfileTabs"
+import { ProfileTabs } from "./ProfileSectionComponents/ProfileTabs"
 
 export function NavProfile() {
   return (

@@ -6,6 +6,7 @@ import { ThemeProvider, useTheme } from './components/ui/Theme-provider.tsx'
 import { ClerkProvider } from '@clerk/clerk-react'
 import {  MultisessionAppSupport} from '@clerk/clerk-react/internal'
 import { dark} from '@clerk/themes'
+import { Toaster } from './components/ui/toaster.tsx'
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 
@@ -51,5 +52,6 @@ const Root = () => {
 createRoot(document.getElementById('root')!).render(
   <ThemeProvider defaultTheme="system">
     <Root />
+    <Toaster />
   </ThemeProvider>
 );

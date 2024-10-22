@@ -11,15 +11,22 @@ import HeroPage from './components/HeroPage';
 
 
 
+
 function App() {
   const { user } = useUser();
 
   return (
+    
     <>
+
+    
+    
+    
     
     
 
-      <BrowserRouter>
+      
+    <BrowserRouter>
 
         <div className='flex justify-center mt-[2rem]'>
           <Routes>
@@ -45,8 +52,10 @@ function App() {
 
           </Routes>
         </div>
-      </BrowserRouter>
-    </>
+      </BrowserRouter> 
+      </>
+    
+    
   )
 }
 

@@ -1,6 +1,6 @@
-import { Input } from "../input"
-import { Label } from "../label"
-import { Textarea } from "../textarea"
+import { Input } from "../ui/input"
+import { Label } from "../ui/label"
+import { Textarea } from "../ui/textarea"
 
 const ProjectDetails = () => {
     
@@ -17,7 +17,7 @@ const ProjectDetails = () => {
               <Input className="ml-2 flex-grow" placeholder="Link"></Input>
             </div>
           </div>
-          <div className="pl-1 gap-2">
+          <div className="pl-1 gap-2 mt-2">
           <Label>Project Description :</Label>
           <Textarea className="mt-2" placeholder="Your project description here....." />
           </div>
