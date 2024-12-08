@@ -13,7 +13,7 @@ export function NavProfile() {
       <SheetTrigger asChild>
        <p className="text-sm font-semibold ml-4">Profile</p>
       </SheetTrigger>
-      <SheetContent className="w-full max-w-[360px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[1030px] overflow-scroll">
+      <SheetContent className="w-full max-w-full sm:max-w-[540px] md:max-w-[720px] lg:max-w-[1030px] overflow-scroll">
       <ProfileTabs/>
       </SheetContent>
       

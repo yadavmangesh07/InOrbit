@@ -1,8 +1,146 @@
-"use client"
+// "use client"
 
-import * as React from "react"
+// import * as React from "react"
 
-import { Button } from "@/components/ui/button"
+// import { Button } from "@/components/ui/button"
+// import {
+//   Command,
+//   CommandEmpty,
+//   CommandGroup,
+//   CommandInput,
+//   CommandItem,
+//   CommandList,
+// } from "@/components/ui/command"
+// import {
+//   Drawer,
+//   DrawerContent,
+//   DrawerTrigger,
+// } from "@/components/ui/drawer"
+// import {
+//   Popover,
+//   PopoverContent,
+//   PopoverTrigger,
+// } from "@/components/ui/popover"
+
+// type Status = {
+//   value: string
+//   label: string
+// }
+
+
+// const statuses: Status[] = [
+//   {
+//     value: "1st Year",
+//     label: "1st Year",
+//   },
+//   {
+//     value: "2nd Year",
+//     label: "2nd Year",
+//   },
+//   {
+//     value: "3rd Year",
+//     label: "3rd Year",
+//   },
+//   {
+//     value: "4th Year",
+//     label: "4th Year",
+//   },
+ 
+// ]
+
+// export function useMediaQuery(query: string) {
+//     const [matches, setMatches] = React.useState(false);
+  
+//     React.useEffect(() => {
+//       const mediaQuery = window.matchMedia(query);
+//       setMatches(mediaQuery.matches);
+  
+//       const handler = (event: MediaQueryListEvent) => {
+//         setMatches(event.matches);
+//       };
+  
+//       mediaQuery.addEventListener("change", handler);
+//       return () => mediaQuery.removeEventListener("change", handler);
+//     }, [query]);
+  
+//     return matches;
+//   }
+
+// export function ComboBoxYear() {
+//   const [open, setOpen] = React.useState(false)
+//   const isDesktop = useMediaQuery("(min-width: 768px)")
+//   const [selectedStatus, setSelectedStatus] = React.useState<Status | null>(
+    
+//   )
+
+//   if (isDesktop) {
+//     return (
+//       <Popover open={open} onOpenChange={setOpen}>
+//         <PopoverTrigger asChild>
+//           <Button variant="outline" className="col-span-3 justify-start">
+//             {selectedStatus ? <>{selectedStatus.label}</> : <>+ Select  Year</>}
+//           </Button>
+//         </PopoverTrigger>
+//         <PopoverContent className="w-[200px] p-0" align="start">
+//           <StatusList setOpen={setOpen} setSelectedStatus={setSelectedStatus} />
+//         </PopoverContent>
+//       </Popover>
+//     )
+//   }
+
+//   return (
+//     <Drawer open={open} onOpenChange={setOpen}>
+//       <DrawerTrigger asChild>
+//         <Button variant="outline" className="w-[150px] justify-start">
+//           {selectedStatus ? <>{selectedStatus.label}</> : <>+ Select Year</>}
+//         </Button>
+//       </DrawerTrigger>
+//       <DrawerContent>
+//         <div className="mt-4 border-t">
+//           <StatusList setOpen={setOpen} setSelectedStatus={setSelectedStatus} />
+//         </div>
+//       </DrawerContent>
+//     </Drawer>
+//   )
+// }
+
+// function StatusList({
+//   setOpen,
+//   setSelectedStatus,
+// }: {
+//   setOpen: (open: boolean) => void
+//   setSelectedStatus: (status: Status | null) => void
+// }) {
+//   return (
+//     <Command>
+//       <CommandInput placeholder="Filter status..." />
+//       <CommandList>
+//         <CommandEmpty>No results found.</CommandEmpty>
+//         <CommandGroup>
+//           {statuses.map((status) => (
+//             <CommandItem
+//               key={status.value}
+//               value={status.value}
+//               onSelect={(value) => {
+//                 setSelectedStatus(
+//                   statuses.find((priority) => priority.value === value) || null
+//                 )
+//                 setOpen(false)
+//               }}
+//             >
+//               {status.label}
+//             </CommandItem>
+//           ))}
+//         </CommandGroup>
+//       </CommandList>
+//     </Command>
+//   )
+// }
+
+"use client";
+
+import * as React from "react";
+import { Button } from "@/components/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -10,106 +148,104 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/components/ui/command"
+} from "@/components/ui/command";
 import {
   Drawer,
   DrawerContent,
   DrawerTrigger,
-} from "@/components/ui/drawer"
+} from "@/components/ui/drawer";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
+} from "@/components/ui/popover";
 
 type Status = {
-  value: string
-  label: string
-}
-
+  value: string;
+  label: string;
+};
 
 const statuses: Status[] = [
-  {
-    value: "1st Year",
-    label: "1st Year",
-  },
-  {
-    value: "2nd Year",
-    label: "2nd Year",
-  },
-  {
-    value: "3rd Year",
-    label: "3rd Year",
-  },
-  {
-    value: "4th Year",
-    label: "4th Year",
-  },
- 
-]
+  { value: "1st Year", label: "1st Year" },
+  { value: "2nd Year", label: "2nd Year" },
+  { value: "3rd Year", label: "3rd Year" },
+  { value: "4th Year", label: "4th Year" },
+];
 
 export function useMediaQuery(query: string) {
-    const [matches, setMatches] = React.useState(false);
-  
-    React.useEffect(() => {
-      const mediaQuery = window.matchMedia(query);
-      setMatches(mediaQuery.matches);
-  
-      const handler = (event: MediaQueryListEvent) => {
-        setMatches(event.matches);
-      };
-  
-      mediaQuery.addEventListener("change", handler);
-      return () => mediaQuery.removeEventListener("change", handler);
-    }, [query]);
-  
-    return matches;
-  }
+  const [matches, setMatches] = React.useState(false);
 
-export function ComboBoxYear() {
-  const [open, setOpen] = React.useState(false)
-  const isDesktop = useMediaQuery("(min-width: 768px)")
-  const [selectedStatus, setSelectedStatus] = React.useState<Status | null>(
-    
-  )
+  React.useEffect(() => {
+    const mediaQuery = window.matchMedia(query);
+    setMatches(mediaQuery.matches);
+
+    const handler = (event: MediaQueryListEvent) => {
+      setMatches(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handler);
+    return () => mediaQuery.removeEventListener("change", handler);
+  }, [query]);
+
+  return matches;
+}
+
+interface ComboBoxYearProps {
+  onChange: (value: string) => void; // Accepting onChange prop
+}
+
+export function ComboBoxYear({ onChange }: ComboBoxYearProps) {
+  const [open, setOpen] = React.useState(false);
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const [selectedStatus, setSelectedStatus] = React.useState<Status | null>(null);
+
+  const buttonText = selectedStatus ? selectedStatus.label : "+ Select Year";
+
+  const handleSelect = (value: string) => {
+    const selected = statuses.find((s) => s.value === value) || null;
+    setSelectedStatus(selected);
+    onChange(value); // Call onChange with the selected value
+    setOpen(false);
+  };
+
+  const content = (
+    <StatusList setOpen={setOpen} onSelect={handleSelect} />
+  );
 
   if (isDesktop) {
     return (
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Button variant="outline" className="col-span-3 justify-start">
-            {selectedStatus ? <>{selectedStatus.label}</> : <>+ Select  Year</>}
+            {buttonText}
           </Button>
         </PopoverTrigger>
         <PopoverContent className="w-[200px] p-0" align="start">
-          <StatusList setOpen={setOpen} setSelectedStatus={setSelectedStatus} />
+          {content}
         </PopoverContent>
       </Popover>
-    )
+    );
   }
 
   return (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
         <Button variant="outline" className="w-[150px] justify-start">
-          {selectedStatus ? <>{selectedStatus.label}</> : <>+ Select Year</>}
+          {buttonText}
         </Button>
       </DrawerTrigger>
       <DrawerContent>
-        <div className="mt-4 border-t">
-          <StatusList setOpen={setOpen} setSelectedStatus={setSelectedStatus} />
-        </div>
+        <div className="mt-4 border-t">{content}</div>
       </DrawerContent>
     </Drawer>
-  )
+  );
 }
 
 function StatusList({
-  setOpen,
-  setSelectedStatus,
+  onSelect,
 }: {
-  setOpen: (open: boolean) => void
-  setSelectedStatus: (status: Status | null) => void
+  setOpen: (open: boolean) => void;
+  onSelect: (value: string) => void;
 }) {
   return (
     <Command>
@@ -122,10 +258,7 @@ function StatusList({
               key={status.value}
               value={status.value}
               onSelect={(value) => {
-                setSelectedStatus(
-                  statuses.find((priority) => priority.value === value) || null
-                )
-                setOpen(false)
+                onSelect(value); // Call onSelect instead of setSelectedStatus directly
               }}
             >
               {status.label}
@@ -134,5 +267,5 @@ function StatusList({
         </CommandGroup>
       </CommandList>
     </Command>
-  )
+  );
 }

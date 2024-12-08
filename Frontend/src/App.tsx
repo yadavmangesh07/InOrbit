@@ -45,8 +45,15 @@ function App() {
 
 
               } />
-            <Route path="/signup" element={<SignUp fallbackRedirectUrl={'/'} />} />
-            <Route path="/signin" element={<SignIn fallbackRedirectUrl={'/'} />} />
+            <Route path="/signup" element={
+              <div><SignUp fallbackRedirectUrl={'/'}   /></div>
+
+            } />
+            <Route path="/signin" element={
+              <div className=' mt-[2rem] sm:mt-[5rem]'>
+                <SignIn fallbackRedirectUrl={'/'} />
+              </div>
+            } />
             <Route path='/userprofile' element={<UserProfile/>} />
 
 

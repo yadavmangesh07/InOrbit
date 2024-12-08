@@ -12,11 +12,11 @@ import SocialProfiles from "./SocialProfiles";
 export function ProfileTabs() {
   
   return (
-    <Tabs defaultValue="yourprofile" className="w-[320px] md:w-auto mt-[1.5rem]">
-      <TabsList className="grid md:w-full grid-cols-4">
+    <Tabs defaultValue="yourprofile" className="w-[320px] md:w-auto mt-[1.5rem] ">
+      <TabsList className="grid md:w-full grid-cols-4 border shadow-inner">
         <TabsTrigger
           value="yourprofile"
-          className="data-[state=active]:bg-green-500 data-[state=active]:text-white"
+          className="data-[state=active]:bg-green-500 data-[state=active]:text-white  "
         >
           <div className="flex items-center gap-2">
             <span className="hidden md:block">Your Profile</span>
@@ -52,7 +52,7 @@ export function ProfileTabs() {
         </TabsTrigger>
       </TabsList>
       <TabsContent value="yourprofile">
-        <p>Profile view</p> {/* Content for the "Your Profile" tab */}
+        <p>view profile section goes here</p>{/* Content for the "Your Profile" tab */}
       </TabsContent>
       <TabsContent value="editprofile">
         <EditProfileTab /> {/* Content for the "Edit Profile" tab */}
